@@ -1,0 +1,10 @@
+n = int(input("enter the 1st value"))
+m = int(input("Enter the 2nd value"))
+
+print(n," + ", m , " = ", (n+m))
+print(n," - ", m , " = ", (n-m))
+print(n," * ", m , " = ", (n*m))
+print(n," / ", m , " = ", (n/m))
+print(n," // ", m , " = ", (n//m))
+print(n," % ", m , " = ", (n%m))
+print(n," ** ", m , " = ", (n**m))
