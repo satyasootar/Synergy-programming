@@ -17,7 +17,7 @@ int main()
          printf("%d  ",arr[i]);
      }
      
-//Insertion Sort logic starts here 
+
    for(i=1;i<n;i++) //For unsorted list
      {
          temp=arr[i]; //tem variable
