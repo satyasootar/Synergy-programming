@@ -48,7 +48,7 @@ int main() {
                 break;
         }
     }
-    return 0; // Return from main
+    return 0; // Return from mai
 }
 
 void push(int x) {
