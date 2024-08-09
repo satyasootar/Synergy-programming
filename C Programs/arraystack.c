@@ -13,8 +13,8 @@ struct stack {
 struct stack s[SIZE];
 int top = -1;
 
-
-//adding operations
+  
+//adding operations  
 void push(int);
 void pop();
 void disp();
