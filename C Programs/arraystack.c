@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-//defining the size of the array
+//defining the size of the arrayyyyy
 #define SIZE 100
 
 
