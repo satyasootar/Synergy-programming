@@ -1,34 +1,35 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
 
+//defining the size of the array
 #define SIZE 100
 
-// Define a structure for stack elements
+
+//defining the structure
 struct stack {
     int info;
 };
 
-// Global variables
 struct stack s[SIZE];
 int top = -1;
 
-// Function prototypes
+
+//adding operations
 void push(int);
 void pop();
 void disp();
 
 int main() {
     int ch, item;
-
-    // Main loop
-    while (1) {
+    
+        while (1) {
         printf("1-push\n");
         printf("2-pop\n");
         printf("3-display\n");
-        printf("4-exit\n");
+        printf("4-exit\n\n\n");
         printf("Enter your choice: ");
         scanf("%d", &ch);
-
+// to choose the operation
         switch (ch) {
             case 1:
                 printf("Enter a number: ");
@@ -48,33 +49,39 @@ int main() {
                 break;
         }
     }
-    return 0; // Return from mai
+    return 0; // Return from main
 }
 
+//push operation
 void push(int x) {
     if (top >= SIZE - 1) {
-        printf("Stack is full and can cause overflow\n");
+        printf("Stack is full and can cause overflow\n\n");
     } else {
         top++;
         s[top].info = x;
     }
 }
 
+//pop operation
 void pop() {
     if (top == -1) {
         printf("Stack is empty and can cause underflow\n");
     } else {
-        printf("The deleted item is %d\n", s[top].info);
+        printf("The deleted item is %d\n\n", s[top].info);
         top--;
     }
 }
 
+//display operation
 void disp() {
     if (top == -1) {
-        printf("Stack is empty\n");
+        printf("Stack is empty\n\n");
     } else {
         for (int i = top; i >= 0; i--) {
-            printf("%d\n", s[i].info);
+            printf("%d ", s[i].info);
         }
+        printf("\n\n");
     }
 }
+
+
