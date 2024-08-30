@@ -1,4 +1,3 @@
-import java.io.*;
 
 class SimpleIntrest{
   public static void main (String args[]){

@@ -24,5 +24,5 @@ class Addition12{
         obj.getData();
         obj.display();
     }
-
+    
 }
