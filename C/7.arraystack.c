@@ -85,3 +85,45 @@ void disp() {
 }
 
 
+// output
+// 1-push
+// 2-pop
+// 3-display
+// 4-exit
+
+
+// Enter your choice: 1
+// Enter a number: 23
+// 1-push
+// 2-pop
+// 3-display
+// 4-exit
+
+
+// Enter your choice: 1
+// Enter a number: 32
+// 1-push
+// 2-pop
+// 3-display
+// 4-exit
+
+
+// Enter your choice: 2
+// The deleted item is 32
+
+// 1-push
+// 2-pop
+// 3-display
+// 4-exit
+
+
+// Enter your choice: 3
+// 23 
+
+// 1-push
+// 2-pop
+// 3-display
+// 4-exit
+
+
+// Enter your choice: 4

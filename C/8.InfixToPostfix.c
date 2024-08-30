@@ -65,3 +65,7 @@ int main(){
     printf("\n");
     return 0;
 }
+
+// output
+// Enter the expression: 2+3-5*5-2
+// 23+55*-2-
