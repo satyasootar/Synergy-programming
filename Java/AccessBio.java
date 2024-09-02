@@ -1,3 +1,5 @@
+//WAP to access your name, age, branch using constructor and print the Name
+
 public class AccessBio {
     String name;
     int age;
