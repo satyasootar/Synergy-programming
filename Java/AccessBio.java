@@ -23,3 +23,11 @@ public class AccessBio {
         b.display();
     }
 }
+
+// OUTPUT
+// Name:Satya
+// Branch:CSE
+// Age:19
+// Name:Soumya
+// Branch:Electrical
+// Age:19
