@@ -72,17 +72,21 @@ public class PerformTask {
         System.out.println("Factorial:"+ f);
     }
 
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number");
-        int n = sc.nextInt();
-         PerformTask p = new PerformTask();
-         p.Pallindrome(n);
-         p.Prime(n);
-         p.Fibo(n);
-         p.Fact(n);
+            Scanner sc = new Scanner(System.in);
+            sc = new Scanner(System.in);
+            System.out.println("Enter a number:");
+            int n = sc.nextInt();
+
+            PerformTask p = new PerformTask();
+            p.Pallindrome(n);
+            p.Prime(n);
+            p.Fibo(n);
+            p.Fact(n);
+        
     }
-}
+  }
 
 /* Enter a number
   11
