@@ -74,3 +74,9 @@ int main() {
 
     return 0;
 }
+
+// output 
+// Before sorting, array elements are - 
+// 12 31 25 8 32 17 40 42 
+// After sorting, array elements are - 
+// 8 12 17 25 31 32 40 42 
