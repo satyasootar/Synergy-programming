@@ -1,4 +1,4 @@
-#WAP a program to find the first n prime number
+#WAP to find the first n prime number
 
 def is_prime(num):
    
