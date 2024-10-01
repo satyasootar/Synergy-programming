@@ -1,4 +1,4 @@
-//WAp to overload a constructor complex to add two complex number by 0 argument, 1 argument & 2 argument constructor
+//WAP to overload a constructor complex to add two complex number by 0 argument, 1 argument & 2 argument constructor
 
 
 class Overload {

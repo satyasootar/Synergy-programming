@@ -1,3 +1,5 @@
+#WAP to create a bank account named account , having a name, account number and balance. THe class shoud have Withdraw, Deposite & display methods
+
 import random
 
 class Account:
