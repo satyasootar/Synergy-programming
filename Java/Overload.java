@@ -19,7 +19,7 @@ public class Overload {
 
     }
     public void show(){
-        System.out.println(real+"j"+img);
+        System.out.println(real+"i"+img);
     }
 
     public static void main(String[] args) {
@@ -33,6 +33,6 @@ public class Overload {
 }
 
 // OUTPUT
-// 5j7
-// 7j10
-// 2j3
+// 5i7
+// 7i10
+// 2i3
