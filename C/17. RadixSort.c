@@ -62,3 +62,18 @@ int main() {
   
   return 0;
 }
+
+// Output 
+// Enter the size of an array:
+// 5
+// Enter the 5 elements of the array:
+// 321
+// 455
+// 654 
+// 342
+// 434     
+// Before sorting, the array elements are:
+// 321  455  654  342  434  
+
+// After sorting, the array elements are:
+// 321  342  434  455  654 
