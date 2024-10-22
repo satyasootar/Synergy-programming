@@ -1,3 +1,5 @@
+// Write a program to demonstrate multiple inheritance by creating a base class for shapes and derived classes for rectangle, circle, and square. Each derived class should calculate and display the area based on user input for dimensions.
+
 import java.util.*;
 
 class Shape{

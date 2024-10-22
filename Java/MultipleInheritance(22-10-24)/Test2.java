@@ -1,3 +1,5 @@
+// Write a program using inheritance to determine a student's eligibility for different fields (Engineering, Medical, Agriculture) based on their percentage. 
+
 import java.util.Scanner;
 
 class Profile {
