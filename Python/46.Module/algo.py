@@ -1,4 +1,4 @@
-#WAP to create a modeul and import it to the test file and access it's functionality.
+#WAP to create a module and import it to the test file and access it's functionality.
 
 import random
 
