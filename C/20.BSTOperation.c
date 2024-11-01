@@ -151,3 +151,58 @@ void postorder(node *temp) {
         printf("%d\t", temp->data);
     }
 }
+
+// OUTPUT
+// Program For Binary Search Tree
+// 1.Create
+// 2.Search
+// 3.Recursive Traversals
+// 4.Exit
+// Enter your choice: 1
+
+// Enter The Element: 20
+
+// Want To enter More Elements? (1/0): 1
+
+// Enter The Element: 23
+
+// Want To enter More Elements? (1/0): 1
+
+// Enter The Element: 43
+
+// Want To enter More Elements? (1/0): 1
+
+// Enter The Element: 5435
+
+// Want To enter More Elements? (1/0): 1
+
+// Enter The Element: 53
+
+// Want To enter More Elements? (1/0): 0
+
+// 1.Create
+// 2.Search
+// 3.Recursive Traversals
+// 4.Exit
+// Enter your choice: 2
+
+// Enter Element to be searched: 23
+
+// The 23 Element is Present, Parent of node 23 is 20
+// 1.Create
+// 2.Search
+// 3.Recursive Traversals
+// 4.Exit
+// Enter your choice: 3
+
+// The Inorder display:
+// 20      23      43      53      5435
+// The Preorder display:
+// 20      23      43      5435    53
+// The Postorder display:
+// 53      5435    43      23      20
+// 1.Create
+// 2.Search
+// 3.Recursive Traversals
+// 4.Exit
+// Enter your choice: 4

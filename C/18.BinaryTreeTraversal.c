@@ -70,3 +70,11 @@ int main() {
   printf("\nPostorder traversal \n");
   postorderTraversal(root);
 }
+
+
+// OUTPUT 
+// Inorder traversal 
+// 4 ->2 ->1 ->3 ->
+// Preorder traversal 
+// 1 ->2 ->4 ->3 ->
+// Postorder traversal 
