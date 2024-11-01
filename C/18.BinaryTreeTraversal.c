@@ -1,4 +1,4 @@
-// Tree traversal in C
+//Write a C program which shows the in-order , pre-order and post-order traversal in binary tree
 
 #include <stdio.h>
 #include <stdlib.h>
