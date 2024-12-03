@@ -1,58 +1,85 @@
-#WAP to crate a addition interface
+#WAP to create a calculator
 
 from tkinter import *
 
 Home = Tk()
 Home.title("Addition")
+Home.geometry("400x300")  
 
-a = StringVar()
-b= StringVar()
-c = StringVar()
 
-l1 = Label(Home, text = "Number 1: ").grid(row= 0, column = 0)
-e1= Entry(Home, textvariable = a).grid(row = 0, column = 1)
+a, b, c = StringVar(), StringVar(), StringVar()
 
-l2 = Label(Home, text = "Number 2: ").grid(row= 1, column = 0)
-e2= Entry(Home, textvariable = b).grid(row = 1, column = 1)
 
-l2 = Label(Home, text = "Result: ").grid(row= 2, column = 0)
-e2= Entry(Home, textvariable = c).grid(row = 2, column = 1)
+l1 = Label(Home, text="Number 1: ")
+l1.place(x=20, y=30)
 
+e1 = Entry(Home, textvariable=a)
+e1.place(x=120, y=30, width=100)
+
+l2 = Label(Home, text="Number 2: ")
+l2.place(x=20, y=70)
+
+e2 = Entry(Home, textvariable=b)
+e2.place(x=120, y=70, width=100)
+
+l3 = Label(Home, text="Result: ")
+l3.place(x=20, y=110)
+
+e3 = Entry(Home, textvariable=c)
+e3.place(x=120, y=110, width=100)
+
+# Define the functions for operations
 def add():
-    x = int(a.get())
-    y = int(b.get())
-    
-    z = x + y
-    c.set(z)
-    
+    try:
+        x = int(a.get())
+        y = int(b.get())
+        z = x + y
+        c.set(z)
+    except ValueError:
+        c.set("Invalid input")
+
 def sub():
-    x = int(a.get())
-    y = int(b.get())
-    
-    z = x - y
-    c.set(z)    
+    try:
+        x = int(a.get())
+        y = int(b.get())
+        z = x - y
+        c.set(z)
+    except ValueError:
+        c.set("Invalid input")
 
 def mult():
-    x = int(a.get())
-    y = int(b.get())
-    
-    z = x * y
-    c.set(z)
-    
+    try:
+        x = int(a.get())
+        y = int(b.get())
+        z = x * y
+        c.set(z)
+    except ValueError:
+        c.set("Invalid input")
+
 def div():
-    x = int(a.get())
-    y = int(b.get())
-    if y == 0:
-        c.set("Cannot divide by zero")
-    else:
-        z = x / y
-        c.set(z) 
+    try:
+        x = int(a.get())
+        y = int(b.get())
+        if y == 0:
+            c.set("Cannot divide by zero")
+        else:
+            z = x / y
+            c.set(z)
+    except ValueError:
+        c.set("Invalid input")
 
 
-b1= Button(Home, text= "Add", bg="Orange", fg="white" , command=add).grid(row= 3, column = 0)
-b2= Button(Home, text= "Sub", bg="Orange", fg="white" , command=sub).grid(row= 3, column = 1)
-b3= Button(Home, text= "Mult", bg="Orange", fg="white" , command=mult).grid(row= 3, column = 2)
-b4= Button(Home, text= "Div", bg="Orange", fg="white" , command=div).grid(row= 3, column = 3)
+b1 = Button(Home, text="Add", bg="orange", fg="white", command=add)
+b1.place(x=20, y=150, width=80)
+
+b2 = Button(Home, text="Sub", bg="orange", fg="white", command=sub)
+b2.place(x=110, y=150, width=80)
+
+b3 = Button(Home, text="Mult", bg="orange", fg="white", command=mult)
+b3.place(x=200, y=150, width=80)
+
+b4 = Button(Home, text="Div", bg="orange", fg="white", command=div)
+b4.place(x=290, y=150, width=80)
 
 
 Home.mainloop()
