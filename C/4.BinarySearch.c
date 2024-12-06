@@ -34,3 +34,11 @@ int main() {
     printf("Value %d not found in the array.\n", key);
     return 0;
 }
+
+
+// OUTPUT
+// Enter the number of values you want to declare: 5
+// Enter 5 values in ascending/descending order:
+// 1 2 3 4 5
+// Enter the number you want to search: 4
+// Found the value at position 4
