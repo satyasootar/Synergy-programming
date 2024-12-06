@@ -38,3 +38,17 @@ int main()
       }
      return 0;
 }
+
+//output
+// Enter the number of elements you want to take as an input:
+// 5
+// Enter 5 numbers
+// Element 1=3
+// Element 2=2
+// Element 3=65
+// Element 4=32
+// Element 5=12
+// Before Sorting the array elements are:
+// 3  2  65  32  12  
+// After Sorting the elements are:
+// 2 3 12 32 65
