@@ -88,3 +88,9 @@ return 0;
 // Sorted array (first 10 elements): 
 // 4 5 6 7 11 13 15 20 21 24 
 // Time taken by Selection Sort: 0.932575 seconds
+
+
+// Time complexity
+// Worst case: O(n^2)
+// Avg case: O(n^2)
+// Best case: O(n^2)
