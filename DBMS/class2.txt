@@ -1,0 +1,82 @@
+Create a table employee whith the following schema:
+eNo(Primary key), eName(NOT NULL), eAddr, ePhone, deptNo, jobId, jobDesignation, salary(> 5000), joinedDate.
+Insert % records
+
+1. Display the details of the salary whose salary is more then the salary of the clerk.
+2. List the employee who are either clerk or analyst.
+3. list the employee who are working for the dept no 10 and 20.
+4. List the employee whose name are startinhg with "S".
+5. Display the name as wee as the first three character of the name starting with "H".
+
+
+CREATE TABLE EMPLOYEE_CS_23_51
+(
+  eNo NUMBER(5) PRIMARY KEY,
+  eName VARCHAR2(20) NOT NULL,
+  eAddr VARCHAR2(20),
+  ePhone NUMBER(10),
+  deptNo NUMBER(10),
+  jobId NUMBER(10),
+  jobDesignation VARCHAR2(20),
+  salary NUMBER(30) CHECK (salary > 5000),
+  joinedDate DATE
+);
+
+DESCRIBE EMPLOYEE_CS_23_51
+
+SELECT * FROM EMPLOYEE_CS_23_51 //Testing
+
+DROP TABLE EMPLOYEE_CS_23_51  //Testing
+
+INSERT INTO EMPLOYEE_CS_23_51 (eNo, eName, eAddr, ePhone, deptNo, jobId, jobDesignation, salary, joinedDate)
+VALUES (1, 'Satya Sootar', 'DKL', 1234567890, 10, 1, 'Manager', 7000, TO_DATE('2020-01-15', 'YYYY-MM-DD'))
+
+INSERT INTO EMPLOYEE_CS_23_51 (eNo, eName, eAddr, ePhone, deptNo, jobId, jobDesignation, salary, joinedDate)
+VALUES (2, 'Rahul Behera', 'BDK', 9876543210, 20, 2, 'Clerk', 5500, TO_DATE('2021-06-20', 'YYYY-MM-DD'))
+
+INSERT INTO EMPLOYEE_CS_23_51 (eNo, eName, eAddr, ePhone, deptNo, jobId, jobDesignation, salary, joinedDate)
+VALUES (3, 'Soumya Sahoo', 'BBSR', 5556667777, 103, 3, 'Analyst', 6000, TO_DATE('2019-11-10', 'YYYY-MM-DD'))
+
+INSERT INTO EMPLOYEE_CS_23_51 (eNo, eName, eAddr, ePhone, deptNo, jobId, jobDesignation, salary, joinedDate)
+VALUES (4, 'Hitesh Garanayak', 'CTK', 4445556666, 104, 4, 'Developer', 7500, TO_DATE('2022-03-25', 'YYYY-MM-DD'))
+
+INSERT INTO EMPLOYEE_CS_23_51 (eNo, eName, eAddr, ePhone, deptNo, jobId, jobDesignation, salary, joinedDate)
+VALUES (5, 'Swoyam Sanjog', 'BDK', 3334445555, 105, 5, 'Developer', 8000, TO_DATE('2023-07-30', 'YYYY-MM-DD'))
+
+
+SELECT eName, salary 
+FROM EMPLOYEE_CS_23_51
+WHERE salary > (
+  SELECT salary 
+  FROM EMPLOYEE_CS_23_51
+  WHERE jobDesignation = 'Clerk'
+);
+
+
+SELECT eNAME, eNo
+FROM EMPLOYEE_CS_23_51
+WHERE jobDesignation = 'Clerk'
+UNION
+SELECT eNAME, eNo
+FROM EMPLOYEE_CS_23_51
+WHERE jobDesignation = 'Analyst'
+
+
+SELECT eNAME, eNo
+FROM EMPLOYEE_CS_23_51
+WHERE deptNo = 10
+UNION
+SELECT eNAME, eNo
+FROM EMPLOYEE_CS_23_51
+WHERE deptNo = 20
+
+
+SELECT eNAME, eNo
+FROM EMPLOYEE_CS_23_51
+WHERE eName LIKE 'S%'
+
+SELECT eName, SUBSTR(eName, 1, 3) AS FirstThreeChars
+FROM EMPLOYEE_CS_23_51
+WHERE eName LIKE 'H%';
+  
+
