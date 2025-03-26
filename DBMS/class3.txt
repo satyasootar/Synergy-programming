@@ -1,0 +1,105 @@
+CREATE TABLE Employee_51 
+(
+ eid NUMBER(10) PRIMARY KEY,
+ name VARCHAR2(30) NOT NULL,
+ dptId NUMBER(10) 
+);
+
+INSERT INTO Employee_51 (eid, name, dptId) 
+VALUES (1, 'John Doe', 101);
+
+INSERT INTO Employee_51 (eid, name, dptId) 
+VALUES (2, 'Jane Smith', 102);
+
+INSERT INTO Employee_51 (eid, name, dptId) 
+VALUES (3, 'Alice Johnson', 101);
+
+INSERT INTO Employee_51 (eid, name, dptId) 
+VALUES (4, 'Bob Brown', 104);
+
+DESC Employee_51;
+DROP TABLE Department_51
+SELECT * FROM Employee_51
+
+CREATE TABLE Department_51
+(
+ dptId NUMBER(10) PRIMARY KEY,
+dtp_Name VARCHAR2(30)
+);
+
+INSERT INTO Department_51 (dptId, dtp_Name)
+VALUES (101, 'HR');
+
+INSERT INTO Department_51 (dptId, dtp_Name)
+VALUES (102, 'IT');
+
+INSERT INTO Department_51 (dptId, dtp_Name)
+VALUES (103, 'FINANCE');
+
+
+
+// Inner Join //
+
+SELECT E.name , D.dtp_Name
+FROM Employee_51 E
+INNER JOIN Department_51 D
+ON E.dptId = D.dptId; 
+
+ // Left Outer Join //
+
+SELECT E.name , D.dtp_Name
+FROM Employee_51 E
+LEFT OUTER JOIN Department_51 D
+ON E.dptId = D.dptId; 
+
+ // Right Outer Join //
+
+SELECT E.name , D.dtp_Name
+FROM Employee_51 E
+RIGHT OUTER JOIN Department_51 D
+ON E.dptId = D.dptId; 
+
+
+// Full outer join //
+
+
+SELECT E.name , D.dtp_Name
+FROM Employee_51 E
+FULL OUTER JOIN Department_51 D
+ON E.dptId = D.dptId; 
+
+
+// Cross Join //
+
+SELECT e.eid, e.name, d.dptId, d.dtp_Name
+FROM Employee_51 e
+CROSS JOIN Department_51 d;
+
+// Natural Join //
+
+SELECT * FROM Employee_51 
+NATURAL JOIN Department_51
+
+// SELF JOIN //
+
+ALTER TABLE Employee_51
+ADD managerId NUMBER(10);
+
+UPDATE Employee_51
+SET managerId = 3
+WHERE eid = 1 ;
+
+UPDATE Employee_51
+SET managerId = 3
+WHERE eid = 2;
+
+UPDATE Employee_51
+SET managerId = 1
+WHERE eid = 4;
+
+SELECT e1.name as employee_1, e2.name as employee_2
+FROM Employee_51 e1
+JOIN Employee_51 e2
+ON e1.eid = e2.managerId
+
+
